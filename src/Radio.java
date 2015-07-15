@@ -30,7 +30,7 @@ public interface Radio {
 	void Memoria(int Pos);
 	/*extrae la frecuencia almacenada del boton indicado, y modifica el estado de la radio para sintonizar la frecuencia extraida*/
 		
-	float getEmisora();
+	double getEmisora();
 	/*retorna la frecuencia de la emisora en sintonia*/
 }
 

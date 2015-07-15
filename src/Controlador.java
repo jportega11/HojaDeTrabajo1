@@ -9,8 +9,8 @@
 public class Controlador implements Radio{
 	private boolean estado;
 	private int banda;
-	private float frecuencia;
-	private float[] botones = new float[12];
+	private double frecuencia;
+	private double[] botones = new double[12];
 
 	public Controlador(){
 		estado = true;
@@ -60,7 +60,7 @@ public class Controlador implements Radio{
 	public void setAMFM(int Band) {
 		banda = Band;
 		if (Band == 0){
-			frecuencia = (float) 87.9;
+			frecuencia = 87.9;
 		}
 		if (Band == 1){
 			frecuencia = 530;
@@ -75,7 +75,7 @@ public class Controlador implements Radio{
 	 **/
 	public void Sintonizar(boolean uD) {
 		if (banda == 0){
-			if (frecuencia > (float) 87.9 && frecuencia < (float) 107.9){
+			if (frecuencia > 87.9 && frecuencia < 107.9){
 				if(uD == true){
 					frecuencia += 0.2;
 				}
@@ -83,20 +83,20 @@ public class Controlador implements Radio{
 					frecuencia -= 0.2;
 				}	
 			}
-			else if (frecuencia == (float) 87.9){
+			else if (frecuencia == 87.9){
 				if(uD == true){
 					frecuencia += 0.2;
 				}
 				else{
-					frecuencia = (float) 107.9;
+					frecuencia = 107.9;
 				}
 			}
-			else if (frecuencia == (float) 107.9){
+			else if (frecuencia == 107.9){
 				if(uD == false){
 					frecuencia -= 0.2;
 				}
 				else{
-					frecuencia = (float) 87.9;
+					frecuencia = 87.9;
 				}
 			}
 		}
@@ -165,7 +165,7 @@ public class Controlador implements Radio{
 	 * @return frecuencia: frecuencia sintonizada
 	 * @propósito devolver frecuencia
 	 **/
-	public float getEmisora() {
+	public double getEmisora() {
 		return frecuencia;
 	}
 }

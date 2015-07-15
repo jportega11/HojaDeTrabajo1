@@ -82,7 +82,7 @@ public class ControladorTest {
 		tester.setAMFM(0);
 		tester.Sintonizar(true);
 		tester.Sintonizar(true);
-		float frecuencia = tester.getEmisora();
+		double frecuencia = tester.getEmisora();
 		tester.Guardar(3);
 		tester.Memoria(3);
 		assertEquals("La emisora en la posicion 3 es 88.3 ",(float)88.3,tester.getEmisora());
@@ -95,7 +95,7 @@ public class ControladorTest {
 		tester.setAMFM(0);
 		tester.Sintonizar(true);
 		tester.Sintonizar(true);
-		float frecuencia = tester.getEmisora();
+		double frecuencia = tester.getEmisora();
 		tester.Guardar(4);
 		tester.Memoria(4);
 		assertEquals("La emisora en la posicion 3 es 88.3 ",(float)88.3,tester.getEmisora());
